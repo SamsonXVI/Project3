@@ -30,7 +30,7 @@ end
 
 function addUsersFriends(origin)
 	if completedNodes[origin.UserID.Value] == nil then
-		wait(3.6)
+		wait(3.6) --Delay because of HTTP Request limit, also why I had to leave my computer running for 2 hours for the data to collect ;-;
 		friendPages = game.Players:GetFriendsAsync(origin.UserID.Value)
 		for item, pageNo in iterPageItems(friendPages) do
 			local friendPointer = Instance.new("ObjectValue")
